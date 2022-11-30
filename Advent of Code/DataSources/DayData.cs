@@ -15,13 +15,13 @@ namespace Advent_of_Code.DataSources
 
         public virtual string[] GetTestData()
         {
-            var path = $"..\\..\\TestData\\test{DayNumber}.mos";
+            var path = $"..\\..\\DataSources\\TestData\\test{DayNumber}.mos";
             return File.Exists(path) ? File.ReadAllLines(path) : Array.Empty<string>();
         }
 
         public virtual string[] GetRealData()
         {
-            var path = $"..\\..\\RealData\\input{DayNumber}.mos";
+            var path = $"..\\..\\DataSources\\RealData\\input{DayNumber}.mos";
             return File.Exists(path) ? File.ReadAllLines(path) : Array.Empty<string>();
         }
     }

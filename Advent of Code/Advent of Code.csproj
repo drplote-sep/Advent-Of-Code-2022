@@ -56,9 +56,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataSources\RealData" />
+    <Folder Include="DataSources\TestData" />
     <Folder Include="Parsers" />
-    <Folder Include="RealData" />
-    <Folder Include="TestData" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
