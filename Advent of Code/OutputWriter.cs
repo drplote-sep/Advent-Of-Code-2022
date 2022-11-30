@@ -41,5 +41,9 @@ namespace Advent_of_Code
             Console.WriteLine($"{whitespace}{s}");
         }
 
+        public static void WriteError(string s)
+        {
+            WriteLine($"ERROR: {s}");
+        }
     }
 }
