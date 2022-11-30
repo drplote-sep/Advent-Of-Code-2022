@@ -1,23 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Advent_of_Code.DataSources
 {
     public class DayData
     {
-        private List<string[]> TestData { get; } = new List<string[]>
+        private static readonly string TestData1 = string.Empty;
+        
+        private Dictionary<int, string[]> TestData { get; } = new Dictionary<int, string[]>
         {
-            new []{
-                "199",
-                "200",
-                "208",
-                "210",
-                "200",
-                "207",
-                "240",
-                "269",
-                "260",
-                "263"
+            {
+                1, new []{string.Empty}
             }
         };
         
@@ -30,12 +24,13 @@ namespace Advent_of_Code.DataSources
 
         public virtual string[] GetTestData()
         {
-            return TestData[DayNumber - 1];
+            return TestData.ContainsKey(DayNumber) ? TestData[DayNumber] : Array.Empty<string>();
         }
 
         public virtual string[] GetRealData()
         {
-            return File.ReadAllLines($"..\\..\\RawInputs\\Day {DayNumber}\\input.mos");
+            var path = $"..\\..\\RawInputs\\input{DayNumber}.mos";
+            return File.Exists(path) ? File.ReadAllLines(path) : Array.Empty<string>();
         }
     }
 }
