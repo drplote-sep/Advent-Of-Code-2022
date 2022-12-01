@@ -56,9 +56,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataSources\RealData" />
-    <Folder Include="DataSources\TestData" />
     <Folder Include="Parsers" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataSources\RealData\input1.mos" />
+    <Content Include="DataSources\TestData\test1.mos" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
