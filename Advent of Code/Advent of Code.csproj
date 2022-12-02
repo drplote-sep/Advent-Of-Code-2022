@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Advent_of_Code</RootNamespace>
     <AssemblyName>Advent of Code</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DataSources\DayData.cs" />
     <Compile Include="DayRunners\Day1Runner.cs" />
+    <Compile Include="DayRunners\Day2Runner.cs" />
     <Compile Include="DayRunners\DayRunner.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="Program.cs" />
@@ -56,11 +57,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Parsers" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="DataSources\RealData\input1.mos" />
+    <Content Include="DataSources\RealData\input2.mos" />
     <Content Include="DataSources\TestData\test1.mos" />
+    <Content Include="DataSources\TestData\test2.mos" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

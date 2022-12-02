@@ -15,7 +15,7 @@ namespace Advent_of_Code
         {
             OutputWriter.WriteHeader("Advent of Code 2022");
             
-            foreach (var dayRunner in GetDayRunners(1))
+            foreach (var dayRunner in GetDayRunners(2))
             {
                 dayRunner.Go(ShouldUseTestData);
             }
