@@ -62,6 +62,7 @@
     <Content Include="DataSources\RealData\input1.mos" />
     <Content Include="DataSources\RealData\input2.mos" />
     <Content Include="DataSources\RealData\input3.mos" />
+    <Content Include="DataSources\RealData\input4.mos" />
     <Content Include="DataSources\TestData\test1.mos" />
     <Content Include="DataSources\TestData\test2.mos" />
     <Content Include="DataSources\TestData\test3.mos" />
