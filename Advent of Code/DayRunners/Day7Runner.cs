@@ -16,7 +16,7 @@ namespace Advent_of_Code.DayRunners
             var inputs = data.Select(d => new ElfFileSystemInput(d)).ToList();
             var rootDirectory = BuildDirectoryTree(inputs);
 
-            var smallDirectorySum = GetDirectoriesUnderSize(100000, rootDirectory);    
+            var smallDirectorySum = GetSumOfDirectoriesUnderSize(100000, rootDirectory);    
             OutputWriter.WriteResult(1, $"Sum of total sizes of directories of less than 100000: {smallDirectorySum}");
 
             var smallestDirectorySize = GetSmallestDirectoryToDeleteForUpdate(rootDirectory);
@@ -50,7 +50,7 @@ namespace Advent_of_Code.DayRunners
             return long.MaxValue;
         }
         
-        private long GetDirectoriesUnderSize(long maxSize, ElfDirectory startingDirectory)
+        private long GetSumOfDirectoriesUnderSize(long maxSize, ElfDirectory startingDirectory)
         {
             long sum = 0;
             if (startingDirectory.GetSize() < maxSize)
@@ -58,7 +58,7 @@ namespace Advent_of_Code.DayRunners
                 sum += startingDirectory.GetSize();
             }
 
-            sum += startingDirectory.Contents.OfType<ElfDirectory>().Sum(d => GetDirectoriesUnderSize(maxSize, d));
+            sum += startingDirectory.Contents.OfType<ElfDirectory>().Sum(d => GetSumOfDirectoriesUnderSize(maxSize, d));
 
             return sum;
         }
