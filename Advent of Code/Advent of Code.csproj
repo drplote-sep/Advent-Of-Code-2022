@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\MessageParser.cs" />
     <Compile Include="DataSources\DayData.cs" />
     <Compile Include="DayRunners\Day1Runner.cs" />
     <Compile Include="DayRunners\Day2Runner.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="DayRunners\Day4Runner.cs" />
     <Compile Include="DayRunners\Day5Runner.cs" />
     <Compile Include="DayRunners\Day6Runner.cs" />
+    <Compile Include="DayRunners\Day7Runner.cs" />
     <Compile Include="DayRunners\DayRunner.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="Program.cs" />
@@ -67,12 +69,14 @@
     <Content Include="DataSources\RealData\input4.mos" />
     <Content Include="DataSources\RealData\input5.mos" />
     <Content Include="DataSources\RealData\input6.mos" />
+    <Content Include="DataSources\RealData\input7.mos" />
     <Content Include="DataSources\TestData\test1.mos" />
     <Content Include="DataSources\TestData\test2.mos" />
     <Content Include="DataSources\TestData\test3.mos" />
     <Content Include="DataSources\TestData\test4.mos" />
     <Content Include="DataSources\TestData\test5.mos" />
     <Content Include="DataSources\TestData\test6.mos" />
+    <Content Include="DataSources\TestData\test7.mos" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

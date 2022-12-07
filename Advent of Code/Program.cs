@@ -7,7 +7,7 @@ using Advent_of_Code.DayRunners;
 
 namespace Advent_of_Code
 {
-    internal class Day1Program
+    internal static class Program
     {
         private static readonly bool ShouldUseTestData = false;
         
@@ -15,7 +15,7 @@ namespace Advent_of_Code
         {
             OutputWriter.WriteHeader("Advent of Code 2022");
             
-            foreach (var dayRunner in GetDayRunners(6))
+            foreach (var dayRunner in GetDayRunners(7))
             {
                 dayRunner.Go(ShouldUseTestData);
             }
@@ -32,7 +32,7 @@ namespace Advent_of_Code
             return dayRunners;
         }
 
-        public static DayRunner CreateDayRunner(int dayNumber)
+        private static DayRunner CreateDayRunner(int dayNumber)
         {
             var runnerType = Assembly.GetExecutingAssembly().GetTypes()
                 .SingleOrDefault(t => t.Name == $"Day{dayNumber}Runner");
