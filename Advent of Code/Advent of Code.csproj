@@ -54,6 +54,7 @@
     <Compile Include="DayRunners\Day5Runner.cs" />
     <Compile Include="DayRunners\Day6Runner.cs" />
     <Compile Include="DayRunners\Day7Runner.cs" />
+    <Compile Include="DayRunners\Day8Runner.cs" />
     <Compile Include="DayRunners\DayRunner.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="Program.cs" />
@@ -70,6 +71,7 @@
     <Content Include="DataSources\RealData\input5.mos" />
     <Content Include="DataSources\RealData\input6.mos" />
     <Content Include="DataSources\RealData\input7.mos" />
+    <Content Include="DataSources\RealData\input8.mos" />
     <Content Include="DataSources\TestData\test1.mos" />
     <Content Include="DataSources\TestData\test2.mos" />
     <Content Include="DataSources\TestData\test3.mos" />
@@ -77,6 +79,7 @@
     <Content Include="DataSources\TestData\test5.mos" />
     <Content Include="DataSources\TestData\test6.mos" />
     <Content Include="DataSources\TestData\test7.mos" />
+    <Content Include="DataSources\TestData\test8.mos" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
