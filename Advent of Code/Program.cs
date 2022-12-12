@@ -15,10 +15,17 @@ namespace Advent_of_Code
         {
             OutputWriter.WriteHeader("Advent of Code 2022");
             
-            foreach (var dayRunner in GetDayRunners(8))
+            // RunDay(9);
+            
+            foreach (var dayRunner in GetDayRunners(12))
             {
                 dayRunner.Go(ShouldUseTestData);
             }
+        }
+
+        private static void RunDay(int dayNumber)
+        {
+            CreateDayRunner(dayNumber).Go(ShouldUseTestData);
         }
 
         private static List<DayRunner> GetDayRunners(int maxDayNumber, int minDayNumber = 1)
@@ -26,7 +33,12 @@ namespace Advent_of_Code
             var dayRunners = new List<DayRunner>();
             for (int i = minDayNumber; i <= maxDayNumber; i++)
             {
-                dayRunners.Add(CreateDayRunner(i));
+                var dayRunner = CreateDayRunner(i);
+                if (dayRunner != null)
+                {
+                    dayRunners.Add(CreateDayRunner(i));    
+                }
+                
             }
 
             return dayRunners;
@@ -37,12 +49,13 @@ namespace Advent_of_Code
             var runnerType = Assembly.GetExecutingAssembly().GetTypes()
                 .SingleOrDefault(t => t.Name == $"Day{dayNumber}Runner");
 
+            var dayData = new DayData(dayNumber);
             if (runnerType == null)
             {
-                throw new ArgumentException($"No DayRunner found for day {dayNumber}");
+                return new IncompleteDayRunner(dayData);
             }
 
-            return Activator.CreateInstance(runnerType, new DayData(dayNumber)) as DayRunner;
+            return Activator.CreateInstance(runnerType, dayData) as DayRunner;
         }
     }
 }
