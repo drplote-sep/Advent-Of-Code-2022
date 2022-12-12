@@ -10,16 +10,22 @@ namespace Advent_of_Code
     internal static class Program
     {
         private static readonly bool ShouldUseTestData = false;
+        private static readonly int? SingleDayRun = 11;
         
         private static void Main(string[] args)
         {
             OutputWriter.WriteHeader("Advent of Code 2022");
-            
-            // RunDay(9);
-            
-            foreach (var dayRunner in GetDayRunners(12))
+
+            if (SingleDayRun.HasValue)
             {
-                dayRunner.Go(ShouldUseTestData);
+                RunDay(SingleDayRun.Value);
+            }
+            else
+            {
+                foreach (var dayRunner in GetDayRunners(12))
+                {
+                    dayRunner.Go(ShouldUseTestData);
+                }    
             }
         }
 
