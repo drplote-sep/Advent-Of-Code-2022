@@ -7,6 +7,31 @@ namespace Advent_of_Code.Common
 {
     public static class AocUtilities
     {
+        public static List<List<string>> GroupByBlankLine(this string[] data)
+        {
+            var bigList = new List<List<string>>();
+            var currentList = new List<string>();
+            foreach (var d in data)
+            {
+                if (string.IsNullOrWhiteSpace(d) && currentList.Any())
+                {
+                    bigList.Add(currentList);
+                    currentList = new List<string>();
+                }
+                else
+                {
+                    currentList.Add(d);
+                }
+            }
+
+            if (currentList.Any())
+            {
+                bigList.Add(currentList);
+            }
+
+            return bigList;
+        }
+        
         public static List<int> ParseAllIntsFromString(this string s)
         {
             var ints = new List<int>();

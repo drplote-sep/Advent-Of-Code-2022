@@ -10,7 +10,7 @@ namespace Advent_of_Code
     internal static class Program
     {
         private static readonly bool ShouldUseTestData = false;
-        private static readonly int? SingleDayRun = 11;
+        private static readonly int? SingleDayRun = 13;
         
         private static void Main(string[] args)
         {

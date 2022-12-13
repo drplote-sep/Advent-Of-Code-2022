@@ -52,6 +52,7 @@
     <Compile Include="DayRunners\Day10Runner.cs" />
     <Compile Include="DayRunners\Day11Runner.cs" />
     <Compile Include="DayRunners\Day12Runner.cs" />
+    <Compile Include="DayRunners\Day13Runner.cs" />
     <Compile Include="DayRunners\Day1Runner.cs" />
     <Compile Include="DayRunners\Day2Runner.cs" />
     <Compile Include="DayRunners\Day3Runner.cs" />
@@ -75,6 +76,7 @@
     <Content Include="DataSources\RealData\input10.mos" />
     <Content Include="DataSources\RealData\input11.mos" />
     <Content Include="DataSources\RealData\input12.mos" />
+    <Content Include="DataSources\RealData\input13.mos" />
     <Content Include="DataSources\RealData\input2.mos" />
     <Content Include="DataSources\RealData\input3.mos" />
     <Content Include="DataSources\RealData\input4.mos" />
@@ -87,6 +89,7 @@
     <Content Include="DataSources\TestData\test10.mos" />
     <Content Include="DataSources\TestData\test11.mos" />
     <Content Include="DataSources\TestData\test12.mos" />
+    <Content Include="DataSources\TestData\test13.mos" />
     <Content Include="DataSources\TestData\test2.mos" />
     <Content Include="DataSources\TestData\test3.mos" />
     <Content Include="DataSources\TestData\test4.mos" />
